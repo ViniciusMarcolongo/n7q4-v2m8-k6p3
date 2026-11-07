@@ -39,3 +39,11 @@ class EnforcementReviewTest(unittest.TestCase):
         with self.assertRaises(ValueError): apply_reviews([self.point],bad,'2026-11-07')
         self.evidence['sourceUrl']='http://example.org'
         with self.assertRaises(ValueError): apply_reviews([self.point],self.ledger,'2026-11-07')
+
+    def test_user_provenance_survives_refresh_and_unknown_origin_is_rejected(self):
+        self.evidence['reviewSource'] = 'USER'
+        value = apply_reviews([self.point], self.ledger, '2026-11-08')[0]['enforcement']
+        self.assertEqual('USER', value['reviewSource'])
+        self.assertEqual('2026-11-07', value['checkedOn'])
+        self.evidence['reviewSource'] = 'UNATTRIBUTED'
+        with self.assertRaises(ValueError): apply_reviews([self.point],self.ledger,'2026-11-07')

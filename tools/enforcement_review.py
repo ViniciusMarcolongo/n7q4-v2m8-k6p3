@@ -1,4 +1,4 @@
-"""Apply dated, site-specific official reviews. Unknown never excludes motorcycles."""
+"""Apply dated, site-specific reviews with provenance. Unknown never excludes motorcycles."""
 import copy
 import datetime as dt
 from urllib.parse import urlsplit
@@ -11,9 +11,11 @@ CAPTURE = {'UNKNOWN', 'FRONT', 'REAR', 'BOTH'}
 def validate(value):
     if value.get('vehicles') not in VEHICLES or value.get('capture') not in CAPTURE:
         raise ValueError('Unknown enforcement classification')
+    if value.get('reviewSource', 'OFFICIAL') not in {'OFFICIAL', 'USER'}:
+        raise ValueError('Unknown review source')
     url = urlsplit(value.get('sourceUrl', ''))
     if url.scheme != 'https' or not url.hostname or url.username or not value.get('sourceName'):
-        raise ValueError('Official review must identify its source')
+        raise ValueError('Review must identify its source')
     dt.date.fromisoformat(value['checkedOn'])
     if len(value['sourceName']) > 160 or len(value['sourceUrl']) > 2000 or len(value.get('note', '')) > 1200:
         raise ValueError('Oversized review')
