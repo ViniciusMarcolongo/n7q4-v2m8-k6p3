@@ -21,6 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import build_catalog
 import cet_data
 import enrich_der_limits as der
+import enforcement_review
 
 BASE = 'https://raw.githubusercontent.com/ViniciusMarcolongo/n7q4-v2m8-k6p3/main/'
 ANTT = 'https://dados.antt.gov.br/api/3/action/package_show?id=radar'
@@ -234,6 +235,8 @@ def refresh(root):
     points = associate(points, previous['points'])
     enriched, _ = der.enrich(dict(points=points), der_rows, today)
     points = deduplicate(enriched['points'])
+    ledger = json.loads((root/'tools/data/enforcement-review.json').read_text('utf8'))
+    points = enforcement_review.apply_reviews(points, ledger, today, review)
     counts = validate(points, previous['points'])
     changed = encoded(points) != encoded(sorted(previous['points'], key=lambda p:p['id']))
     status = dict(checkedAt=dt.datetime.now(dt.timezone.utc).isoformat(), changed=changed, counts=counts, sources=sources, review=review)

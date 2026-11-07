@@ -1,0 +1,141 @@
+{
+  "checkedOn": "2026-11-07",
+  "result": "No site-specific confirmation of vehicle coverage or plate capture found",
+  "scope": "SP-280 São Paulo to Posto Cinquentão km68, both directions; nearby km71.4 also reviewed",
+  "references": {
+    "der.xml": {
+      "url": "https://dersp.der.sp.gov.br/Upload/XML/radares.xml",
+      "sha256": "daffd334cca97b12b951a52f5f6dd51ad831235744a4ee5ac46a7721919afd36",
+      "bytes": 2986063
+    },
+    "artesp-layer.json": {
+      "url": "https://mapas.semil.sp.gov.br/server/rest/services/Hosted/ARTESP_Pontos_rodovias/FeatureServer/0?f=pjson",
+      "sha256": "991c45d18364442e7230790338f84a24bcac1bd8561a06110089e02a4db7f96a",
+      "bytes": 60905
+    },
+    "ecovias.html": {
+      "url": "https://ecoviasraposocastello.com.br/noticias/ecovias-raposo-castello-inicia-implantacao-de-seis-novos-radares-para-reforcar-a-seguranca-viaria/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "sorocabana.html": {
+      "url": "https://rodovias.motiva.com.br/sorocabana/noticias/2026/outubro/feriado-de-finados--motiva-sorocabana-prepara-operacao-para-rece/",
+      "sha256": "9f8ddada99dfda8e1df70ea3d849fee473e6859d0ec2da1ba98067d7fc10c24b",
+      "bytes": 189114
+    }
+  },
+  "records": [
+    {
+      "id": "ARTESP-29236",
+      "description": "RADAR FIXO SP280 km 063+000 Sentido Leste Qntde de faixas: 3 RA: 120005000098 Marca: FISCALTECH Modelo: SPEED CONTROL II Certificado de Aferição: 15918869 Data operção: jan/2024 Validade: jan/2034 · Mairinque · Lote 12 - ViaOeste",
+      "scope": "RADAR FIXO\nSP280\nKM 063+000\nSENTIDO LESTE\nQNTDE DE FAIXAS: 3\nRA: 120005000098\nMARCA: FISCALTECH\nMODELO: SPEED CONTROL II\nCERTIFICADO DE AFERICAO: 15918869\nDATA OPERCAO: JAN/2024\nVALIDADE: JAN/2034",
+      "voiceDirection": "+",
+      "enforcement": {
+        "vehicles": "UNKNOWN",
+        "capture": "UNKNOWN",
+        "sourceName": "ARTESP · Inventário de pontos rodoviários",
+        "sourceUrl": "https://mapas.semil.sp.gov.br/server/rest/services/Hosted/ARTESP_Pontos_rodovias/FeatureServer/0/29236",
+        "checkedOn": "2026-11-07",
+        "note": "O registro público consultado identifica o ponto e o sentido da rodovia, mas não confirma os veículos fiscalizados nem a captura frontal/traseira. O limite para veículos leves não comprova captura de motocicletas."
+      }
+    },
+    {
+      "id": "ARTESP-29237",
+      "description": "RADAR FIXO SP280 km 071+400 Oeste Qntde de faixas: 3 RA: 120005000109 Marca: FISCALTECH Modelo: SPEED CONTROL II Certificado de Aferição: 10064444 Data operção: jan/2024 Validade: jan/2034 · Itu · Lote 12 - ViaOeste",
+      "scope": "RADAR FIXO\nSP280\nKM 071+400\nOESTE\nQNTDE DE FAIXAS: 3\nRA: 120005000109\nMARCA: FISCALTECH\nMODELO: SPEED CONTROL II\nCERTIFICADO DE AFERICAO: 10064444\nDATA OPERCAO: JAN/2024\nVALIDADE: JAN/2034",
+      "voiceDirection": "+",
+      "enforcement": {
+        "vehicles": "UNKNOWN",
+        "capture": "UNKNOWN",
+        "sourceName": "ARTESP · Inventário de pontos rodoviários",
+        "sourceUrl": "https://mapas.semil.sp.gov.br/server/rest/services/Hosted/ARTESP_Pontos_rodovias/FeatureServer/0/29237",
+        "checkedOn": "2026-11-07",
+        "note": "O registro público consultado identifica o ponto e o sentido da rodovia, mas não confirma os veículos fiscalizados nem a captura frontal/traseira. O limite para veículos leves não comprova captura de motocicletas."
+      }
+    },
+    {
+      "id": "DER-00017564",
+      "description": "SP 280 · km 35.09 · Itapevi",
+      "scope": "Oeste",
+      "voiceDirection": "+",
+      "enforcement": {
+        "vehicles": "UNKNOWN",
+        "capture": "UNKNOWN",
+        "sourceName": "DER-SP · Pesquisa de Radares",
+        "sourceUrl": "https://dersp.der.sp.gov.br/WebSite/MalhaRodoviaria/PesquisaRadar.aspx",
+        "checkedOn": "2026-11-07",
+        "note": "O registro público consultado identifica o ponto e o sentido da rodovia, mas não confirma os veículos fiscalizados nem a captura frontal/traseira. O limite para veículos leves não comprova captura de motocicletas."
+      }
+    },
+    {
+      "id": "DER-00017628",
+      "description": "SP 280 · km 52.06 · Araçariguama",
+      "scope": "Oeste",
+      "voiceDirection": "+",
+      "enforcement": {
+        "vehicles": "UNKNOWN",
+        "capture": "UNKNOWN",
+        "sourceName": "DER-SP · Pesquisa de Radares",
+        "sourceUrl": "https://dersp.der.sp.gov.br/WebSite/MalhaRodoviaria/PesquisaRadar.aspx",
+        "checkedOn": "2026-11-07",
+        "note": "O registro público consultado identifica o ponto e o sentido da rodovia, mas não confirma os veículos fiscalizados nem a captura frontal/traseira. O limite para veículos leves não comprova captura de motocicletas."
+      }
+    },
+    {
+      "id": "DER-17627",
+      "description": "SP 280 · km 63 · Itu",
+      "scope": "Leste",
+      "voiceDirection": "",
+      "enforcement": {
+        "vehicles": "UNKNOWN",
+        "capture": "UNKNOWN",
+        "sourceName": "DER-SP · Pesquisa de Radares",
+        "sourceUrl": "https://dersp.der.sp.gov.br/WebSite/MalhaRodoviaria/PesquisaRadar.aspx",
+        "checkedOn": "2026-11-07",
+        "note": "O registro público consultado identifica o ponto e o sentido da rodovia, mas não confirma os veículos fiscalizados nem a captura frontal/traseira. O limite para veículos leves não comprova captura de motocicletas. A associação exata de pista deste registro também permanece pendente."
+      }
+    },
+    {
+      "id": "DER-17629",
+      "description": "SP 280 · km 71.4 · Itu",
+      "scope": "Oeste",
+      "voiceDirection": "",
+      "enforcement": {
+        "vehicles": "UNKNOWN",
+        "capture": "UNKNOWN",
+        "sourceName": "DER-SP · Pesquisa de Radares",
+        "sourceUrl": "https://dersp.der.sp.gov.br/WebSite/MalhaRodoviaria/PesquisaRadar.aspx",
+        "checkedOn": "2026-11-07",
+        "note": "O registro público consultado identifica o ponto e o sentido da rodovia, mas não confirma os veículos fiscalizados nem a captura frontal/traseira. O limite para veículos leves não comprova captura de motocicletas. A associação exata de pista deste registro também permanece pendente."
+      }
+    },
+    {
+      "id": "DER-CEV260521",
+      "description": "SP 280 · km 63 · Itu",
+      "scope": "Leste",
+      "voiceDirection": "",
+      "enforcement": {
+        "vehicles": "UNKNOWN",
+        "capture": "UNKNOWN",
+        "sourceName": "DER-SP · Pesquisa de Radares",
+        "sourceUrl": "https://dersp.der.sp.gov.br/WebSite/MalhaRodoviaria/PesquisaRadar.aspx",
+        "checkedOn": "2026-11-07",
+        "note": "O registro público consultado identifica o ponto e o sentido da rodovia, mas não confirma os veículos fiscalizados nem a captura frontal/traseira. O limite para veículos leves não comprova captura de motocicletas. A associação exata de pista deste registro também permanece pendente."
+      }
+    }
+  ],
+  "excludedInference": [
+    "A speed limit for motorcycles does not prove motorcycle plate capture",
+    "Leste/Oeste is travel direction, not front/rear capture",
+    "Equipment model approval does not prove the installation configuration"
+  ],
+  "pendingInstallation": {
+    "km": 19.3,
+    "direction": "Oeste",
+    "source": "https://ecoviasraposocastello.com.br/noticias/ecovias-raposo-castello-inicia-implantacao-de-seis-novos-radares-para-reforcar-a-seguranca-viaria/",
+    "note": "Announcement 2026-11-06; expected December operation. Not added as an active radar."
+  },
+  "auxiliaryReferences": [
+    "https://www.der.sp.gov.br/WebSite/Arquivos/Radar/Lista_Localizacao_Radar.pdf",
+    "https://registro.inmetro.gov.br/consulta/detalhe.aspx?NumeroRegistro=005342%2F2013&pag=1"
+  ]
+}
