@@ -1,4 +1,4 @@
-name: Atualizar cadastro de radares
+name: Sincronizar arquivos
 on:
   schedule:
     - cron: '17 8 * * *'
@@ -19,16 +19,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Testar regras de atualização
+      - name: Verificar regras
         run: python -m unittest discover -s tools/updates -p 'test_*.py'
-      - name: Consultar fontes oficiais e validar
+      - name: Preparar arquivos
         run: python tools/updates/refresh.py .
-      - name: Publicar cadastro e auditoria
+      - name: Salvar versões
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data latest.json status.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Atualizar cadastro e consulta das fontes oficiais'
+            git commit -m 'Atualizar arquivos e registros de verificação'
             git push
           fi

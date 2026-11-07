@@ -22,7 +22,7 @@ import build_catalog
 import cet_data
 import enrich_der_limits as der
 
-BASE = 'https://raw.githubusercontent.com/ViniciusMarcolongo/sp-reference-data/main/'
+BASE = 'https://raw.githubusercontent.com/ViniciusMarcolongo/n7q4-v2m8-k6p3/main/'
 ANTT = 'https://dados.antt.gov.br/api/3/action/package_show?id=radar'
 ARTESP = 'https://mapas.semil.sp.gov.br/server/rest/services/Hosted/ARTESP_Pontos_rodovias/FeatureServer/0/query'
 
