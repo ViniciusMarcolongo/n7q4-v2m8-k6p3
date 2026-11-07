@@ -77,6 +77,13 @@ class RefreshTest(unittest.TestCase):
         result = deduplicate([der, other])
         self.assertEqual(['ARTESP-1'], [p['id'] for p in result])
 
+    def test_coincident_der_artesp_equipment_with_rounded_km_is_one_point(self):
+        other = point('ARTESP-1')
+        other.update(source='ARTESP', description='SP280 km 035+060', segment=None, directions='', offset=0)
+        self.assertEqual(['DER-1'], [p['id'] for p in deduplicate([point(), other])])
+        other['scope'] = 'Leste'
+        self.assertEqual(2, len(deduplicate([point(), other])))
+
 
 if __name__ == '__main__':
     unittest.main()

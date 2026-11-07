@@ -175,7 +175,8 @@ def deduplicate(points):
                 and der.road(p['description']) is not None
                 and der.road(p['description']) == der.road(q['description'])
                 and der.kilometer(p['description']) is not None
-                and der.kilometer(p['description']) == der.kilometer(q['description'])
+                and der.kilometer(q['description']) is not None
+                and abs(der.kilometer(p['description'])-der.kilometer(q['description'])) <= .1
                 and der.directions(p['scope']) and der.directions(p['scope']) == der.directions(q['scope'])
                 and math.hypot((p['lat']-q['lat'])*111195, (p['lon']-q['lon'])*101000) < 15]
             duplicate = bool(matches)
